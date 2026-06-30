@@ -51,7 +51,7 @@ button { color: inherit; font: inherit; }
 .nav-links .nav-cta { color: var(--white); background: var(--orange); text-align: center; }
 .nav-links .nav-cta:hover { color: var(--white); background: var(--orange-dark); }
 
-.hero { position: relative; min-height: 710px; display: grid; align-items: center; padding: 70px 0 82px; overflow: hidden; background: var(--green-950) url("images/herosectionbackgroundpicture.jpeg") center / cover no-repeat; }
+.hero { position: relative; min-height: 710px; display: grid; align-items: center; padding: 70px 0 82px; overflow: hidden; background: var(--green-950) url("images/NEWBACKGROUNDHEROSECTIONIMAGE.jpeg") center / cover no-repeat; }
 .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11, 37, 26, .48) 0%, rgba(18, 56, 39, .30) 48%, rgba(18, 56, 39, .08) 100%); }
 .hero-blob { position: absolute; border-radius: 50%; pointer-events: none; }
 .hero-blob-one { width: 190px; height: 190px; top: 12%; left: -120px; border: 40px solid var(--orange-soft); }
@@ -201,6 +201,10 @@ h2 { font-size: clamp(2.1rem, 7vw, 3.65rem); }
 .brand-light { padding: 4px; background: var(--white); border-radius: 10px; }
 .brand-light img { mix-blend-mode: normal; }
 .footer-about p { max-width: 310px; }
+.footer-socials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.footer-socials a { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 12px; color: var(--white); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); border-radius: 10px; font-size: .75rem; font-weight: 750; transition: color .2s, background .2s, transform .2s; }
+.footer-socials a:hover { color: var(--green-950); background: #ffc08e; transform: translateY(-2px); }
+.footer-socials svg { width: 18px; height: 18px; fill: currentColor; }
 .footer h3 { margin: 0 0 14px; color: var(--white); font-family: Georgia, serif; font-size: 1rem; }
 .footer-grid > div > a:not(.brand), .footer-grid > div > p { display: block; margin: 0 0 8px; font-size: .78rem; }
 .footer-grid > div > a:not(.brand):hover { color: #ffc08e; }

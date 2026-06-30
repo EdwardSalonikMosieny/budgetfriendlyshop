@@ -1,4 +1,14 @@
 const galleryItems = [
+  { image: 'WhatsApp Image 2026-06-27 at 5.35.56 PM.jpeg', title: 'Kitchen Utensils & Tableware', badge: 'In Store Now', position: 'center' },
+  { image: 'WhatsApp Image 2026-06-27 at 5.36.08 PM.jpeg', title: '10-Piece Non-Stick Cookware Set', badge: 'Quality Pick', position: 'center' },
+  { image: 'WhatsApp Image 2026-06-27 at 5.36.17 PM.jpeg', title: 'Utensils & Serving Tools', badge: 'Kitchen Essential', position: 'center' },
+  { image: 'WhatsApp Image 2026-06-27 at 5.36.25 PM.jpeg', title: 'Food Warmers & Dinnerware', badge: 'In Store Now', position: 'center' },
+  { image: 'WhatsApp Image 2026-06-27 at 5.36.32 PM.jpeg', title: 'Dinnerware Collection', badge: 'Home Favourite', position: 'center' },
+  { image: 'WhatsApp Image 2026-06-27 at 5.36.42 PM.jpeg', title: 'Pressure Cookers & Cookware', badge: 'Quality Pick', position: 'center' },
+  { image: 'WhatsApp Image 2026-06-27 at 5.36.49 PM.jpeg', title: 'Cookware Sets In Store', badge: 'Available', position: 'center' },
+  { image: 'WhatsApp Image 2026-06-27 at 5.36.59 PM.jpeg', title: 'Pots & Pans Collection', badge: 'Budget Friendly', position: 'center' },
+  { image: 'WhatsApp Image 2026-06-27 at 5.37.22 PM.jpeg', title: 'Kitchenware Showroom', badge: 'Come Say Hello', position: 'center' },
+  { image: 'WhatsApp Image 2026-06-27 at 5.37.37 PM.jpeg', title: 'Cookware & Home Storage', badge: 'In Store Now', position: 'center' },
   { image: 'WhatsApp Image 2026-06-27 at 11.12.44 AM.jpeg', title: 'Elegant Thermal Flask', badge: 'Quality Pick', position: 'center' },
   { image: 'WhatsApp Image 2026-06-27 at 11.18.19 AM.jpeg', title: 'Everyday Cutlery Set', badge: 'Kitchen Essential', position: 'center' },
   { image: 'WhatsApp Image 2026-06-27 at 11.18.36 AM.jpeg', title: 'Glass Food Containers', badge: 'Available', position: 'center' },
@@ -23,9 +33,7 @@ const galleryItems = [
   { image: 'WhatsApp Image 2026-06-27 at 11.12.48 AM.jpeg', title: 'Classic Kitchen Kettles', badge: 'Available', position: 'center' },
   { image: 'WhatsApp Image 2026-06-27 at 11.18.23 AM.jpeg', title: 'Compact Microwave Oven', badge: 'EX UK Item', position: 'center' },
   { image: 'WhatsApp Image 2026-06-27 at 11.18.32 AM.jpeg', title: 'Double-Door Refrigerator', badge: 'Home Essential', position: 'center' },
-  { image: 'WhatsApp Image 2026-06-27 at 11.18.33 AM.jpeg', title: 'Cordless Electric Kettle', badge: 'Kitchen Essential', position: 'center' },
-  { image: 'WhatsApp Image 2026-06-27 at 11.12.42 AM.jpeg', title: 'Floral Cooking Pot Set', badge: 'Quality Pick', position: 'center' },
-  { image: 'WhatsApp Image 2026-06-27 at 11.18.46 AM.jpeg', title: 'Visit Our Kitchenware Shop', badge: 'Come Say Hello', position: 'center' }
+  { image: 'WhatsApp Image 2026-06-27 at 11.18.33 AM.jpeg', title: 'Cordless Electric Kettle', badge: 'Kitchen Essential', position: 'center' }
 ];
 
 const galleryGrid = document.querySelector('#gallery-grid');
@@ -33,6 +41,7 @@ const lightbox = document.querySelector('#lightbox');
 const lightboxImage = document.querySelector('#lightbox-image');
 const lightboxTitle = document.querySelector('#lightbox-title');
 const lightboxBadge = document.querySelector('#lightbox-badge');
+const galleryCount = document.querySelector('#gallery-count');
 let activeImageIndex = 0;
 
 function renderGallery() {
@@ -81,6 +90,7 @@ function closeLightbox() {
 }
 
 renderGallery();
+galleryCount.textContent = galleryItems.length;
 
 lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
 lightbox.querySelector('.lightbox-prev').addEventListener('click', () => updateLightbox(activeImageIndex - 1));
